@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <title>TYCSE Agrotech</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style/myhome.css')}}">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#prediction">Prediction</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="home">
+    <h2>{{ prediction_text }}</h2>
+    <h1 style="color: Brown;">TYCSE Agrotech</h1>
+    <p style="color: black;">Welcome to our Crop Recommendation System (CRS) project! Our innovative system
+      utilizes machine learning to empower farmers with informed decisions on crop selection. By analyzing
+      soil composition, environmental factors, and historical data, we recommend crops best suited to local
+      conditions, promoting sustainability and maximizing yield. Beyond individual farms, CRS contributes to
+      broader goals of sustainable agriculture and food security by conserving resources and enhancing
+      productivity. Our user-friendly tool aims to revolutionize crop selection, fostering increased productivity
+      and food security. Join us in cultivating a smarter, more sustainable future for agriculture.</p>
+    <br>
+    <h3 style="color: Green;">Let's Start New Journey With TYCSE Agrotech</h3>
+    <br>
+      <br>
+    <h2 style="color: Black;">Go to Prediction </h2>
+      <br>
+      <div class="moving-text"><h2 style="color: blue;">Welcome to crop Recommendation System</h2></div>
+      <br>
+      <br>
+      <br>
+  </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p style="color: black;">Welcome to our project on crop recommendation using machine learning! In this project, we have developed a system that helps farmers make informed decisions about which crops to grow based on various factors such as nitrogen, phosphorus, potassium levels in the soil,
+      as well as environmental conditions like temperature, humidity, pH, and rainfall.
+      By analyzing historical data and employing machine learning algorithms, our system predicts which crops are most suitable for a particular area and its specific conditions. This recommendation can help farmers maximize their yield and profitability while also promoting sustainable agricultural practices
+      The significance of the CRS extends beyond individual farmers, as it contributes to the broader goals of sustainable agriculture and food security. By promoting the cultivation of crops best suited to local conditions, the CRS aids in resource conservation, minimizes input wastage, and enhances overall
+      agricultural productivity.
+      Our goal is to provide an easy-to-use tool that empowers farmers to make smart choices about crop
+      selection, ultimately contributing to increased productivity and food security.</p>
+    <br>
+    <h3 style="color: black;">Our Mission</h3>
+    <p style="color: black;">Our mission is to revolutionize farming practices through our Crop
+      Recommendation System (CRS). By harnessing the power of machine learning and extensive data
+      analysis, we empower farmers to make informed decisions about crop selection, maximizing yield
+      and profitability while promoting sustainability. Through tailored recommendations based on soil
+      composition, environmental factors, and historical data, our goal is to enhance agricultural
+      productivity and food security. By championing efficient resource utilization and minimizing
+      wastage, we aspire to create a future where farming is not only economically viable but also
+      environmentally responsible. Together, we're cultivating a brighter, more sustainable future for
+      agriculture.</p>
+      <br>
+      <br>
+      <br>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p style="color: black;">Empower farmers with our Crop Recommendation System (CRS), utilizing
+      advanced machine learning algorithms to analyze soil data and environmental factors. Our intuitive
+      tool aids in selecting optimal crops, enhancing yield, and promoting sustainable agricultural
+      practices for increased productivity and food security. Join us in revolutionizing farming decision.</p>
+    <br>
+      <br>
+      <br>
+      <br>
+    <h2 style="color: white;">Our Services Include:</h2>
+
+      <h2 style="color: black;"><li>Crop Recommendation</li></h2>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
+
+  <section id="prediction">
+    <h1>Crop Recommendation</h1>
+      <br>
+    <h5>(Enter parameters and click Predict to get the result)</h5>
+      <br>
+    <!-- Main Input For Receiving Query to our ML -->
+   <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="N" placeholder="N (Nitrogen)" required="required" />
+      <input type="text" name="P" placeholder="P (Potassium)" required="required" />
+      <input type="text" name="K" placeholder="K (Phosphorus)" required="required" />
+      <input type="text" name="temperature" placeholder="Temperature" required="required" />
+      <input type="text" name="humidity" placeholder="Humidity" required="required" />
+      <input type="text" name="ph" placeholder="ph" required="required" />
+      <input type="text" name="rainfall" placeholder="Rainfall" required="required" />
+       <br>
+
+       <p> <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></p>
+    </form>
+      <p>
+          {{ prediction_text }}
+      </P>
+      <br>
+  </section>
+      <section id="contact">
+        <h1>Contact Us</h1>
+        <br>
+        <p style="color: black;">For inquiries or collaborations regarding our Crop Recommendation System
+          (CRS), please feel free to reach out to our team. We welcome your feedback, suggestions, and
+          partnerships as we work towards advancing sustainable agriculture and supporting farmers worldwide.
+          Contact us to learn more about our innovative solution.
+        </p>
+
+        <h2 style="color: white;">Contact Information:</h2>
+        <nav>
+            <ul class="student">
+                <li>
+                    <h2 style="color: black;"><p>Name: Rutuja Moakle</p></h2>
+                    <h2 style="color: black;"><p>Mobile No:9529259355</p></h2>
+                    <h2 style="color: black;"><p>Email: rutujamokale2003@gmail.com</p></h2>
+                </li>
+                <li>
+                    <h2 style="color: black;"><p>Name: Amruta Katharut</p></h2>
+                    <h2 style="color: black;"><p>Mobile No: 8080911056</p></h2>
+                    <h2 style="color: black;"><p>Email:amrutakatharut@gmail.com</p></h2>
+                </li>
+                <li>
+                    <h2 style="color: black;"><p>Name: Deepali Patil</p></h2>
+                    <h2 style="color: black;"> <p>Mobile No: 7897643267</p></h2>
+                    <h2 style="color: black;"><p>Email:patildipa748@gmail.com</p></h2>
+                </li>
+                <li>
+                    <h2 style="color: black;"><p>Name: Prerana Munse</p></h2>
+                    <h2 style="color: black;"><p>Mobile No: 9503188315</p></h2>
+                    <h2 style="color: black;"><p>preranamunse15@gmail.com</p></h2>
+                </li>
+                <li>
+                    <h2 style="color: black;"><p>Name:Madhuri Kamble </p></h2>
+                    <h2 style="color: black;"> <p>Mobile No: 8856075992</p></h2>
+                    <h2 style="color: black;"><p>Email:kamblemadhuri115@gmail.com</p></h2>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <br><br><br>
+ <section id="admin-login">
+        <h2>Administrator Login</h2>
+        <p><a href="{{ url_for('login') }}">Admin Login</a></p>
+    </section>
+
+
+        <footer>
+        <p>&copy; 2024 TYCSE Agrotech. All rights reserved.</p>
+    </footer>
+</main>
+</body>
+</html>
